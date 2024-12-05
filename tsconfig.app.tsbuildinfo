@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/scene.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/3d/box.tsx","./src/models/monke.tsx","./src/models/uclan_lg.tsx","./src/models/uclan_sm.tsx","./src/pages/desktop.tsx","./src/pages/mobile.tsx"],"version":"5.6.3"}
