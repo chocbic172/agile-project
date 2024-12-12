@@ -1,0 +1,62 @@
+import { useEffect, useRef } from "react"
+
+import {Image as ImageLayer, Vector as VectorLayer} from "ol/layer"
+import VectorSource from "ol/source/Vector"
+import GeoJSON from 'ol/format/GeoJSON.js';
+import Static from "ol/source/ImageStatic"
+import { getCenter } from "ol/extent"
+import { Projection } from "ol/proj"
+import { Map, View } from "ol"
+
+import prestonMapImg from './presonmap.png'
+import prestonJson from './prestonmap.json'
+
+import 'ol/ol.css'
+
+const extent = [0, 0, 3270, 3776]
+
+const projection = new Projection({
+  code: 'preston-map',
+  units: 'pixels',
+  extent: extent,
+})
+
+export default function PrestonMap() {
+    const mapRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (!mapRef.current) return
+
+        const vectorOverlay = new VectorSource({
+          features: new GeoJSON().readFeatures(prestonJson)
+        })
+
+        const vectorLayer = new VectorLayer({
+          source: vectorOverlay,
+        })
+
+        const mapObj = new Map({
+          view: new View({
+            projection: projection,
+            center: getCenter(extent),
+            zoom: 1.25,
+            minZoom: 0.8,
+            maxZoom: 4.5,
+          }),
+          layers: [
+            new ImageLayer({ source: new Static({
+              url: prestonMapImg,
+              projection: projection,
+              imageExtent: extent,
+            }) }),
+            vectorLayer
+          ],
+        })
+
+        mapObj.setTarget(mapRef.current)
+
+        return () => mapObj.setTarget('')
+    }, []);
+
+    return <div className="map" ref={mapRef} style={{ width: '100%', height: '70%' }} />
+}

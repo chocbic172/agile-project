@@ -1,37 +1,58 @@
 import { Canvas } from "@react-three/fiber";
-import { XR, createXRStore } from '@react-three/xr'
-import { useState } from "react";
+import { IfInSessionMode, XR, createXRStore } from '@react-three/xr'
 
 import { Model } from "../models/Uclan_lg"
+import { Button, Card, CardActions, CardContent, Paper, Typography } from "@mui/material";
+
+type MobileProps = {
+  returnToMenu: () => void,
+}
 
 const store = createXRStore()
 
-export default function Mobile() {
-    const [red, setRed] = useState(false)
-
-    return(
+export default function Mobile({ returnToMenu }: MobileProps) {
+  return(
         <>
-        <button
-            onClick={() => store.enterAR()}
-            style={{
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                userSelect: 'none',
-                zIndex: 9999
-            }}>
-                Enter AR
-        </button>
+        <Card
+          sx={{
+            minWidth: '75%',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 9990
+        }}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Enter AR
+            </Typography>
+            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+              To view the campus in your own room in 3d, press "Start AR" below:
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size='small' onClick={() => store.enterAR()}>Start AR</Button>
+            <Button size='small' onClick={returnToMenu}>Back</Button>
+          </CardActions>
+        </Card>
         <Canvas>
           <XR store={store}>
-            <directionalLight color={0xffffff} intensity={0.8} position={[10, 15, 10]} />
-            {/* <mesh pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1, -0.5]}>
-                <boxGeometry args={[0.2, 0.2, 0.2]} />
-                <meshPhysicalMaterial color={red ? 'red' : 'blue'} />
-            </mesh> */}
-            <Model scale={0.002} position={[0, 0.75, -0.5]} />
+            <IfInSessionMode allow='immersive-ar'>
+              <directionalLight color={0xffffff} intensity={0.8} position={[10, 15, 10]} />
+              <Model scale={0.002} position={[0, 0.75, -0.5]} />
+            </IfInSessionMode>
           </XR>
         </Canvas>
+        <Paper
+          sx={{
+            backgroundColor: '#36363f',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+        />
       </>
     )
 }
