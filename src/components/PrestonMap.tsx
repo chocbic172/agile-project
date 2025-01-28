@@ -12,6 +12,9 @@ import prestonMapImg from './presonmap.png'
 import prestonJson from './prestonmap.json'
 
 import 'ol/ol.css'
+import Style from "ol/style/Style";
+import Stroke from "ol/style/Stroke";
+import Fill from "ol/style/Fill";
 
 const extent = [0, 0, 3270, 3776]
 
@@ -21,11 +24,36 @@ const projection = new Projection({
   extent: extent,
 })
 
-export default function PrestonMap() {
+interface PrestonMapProps {
+  selectedCode: string
+  setSelectedCode: (newCode: string) => void
+}
+
+export default function PrestonMap({ selectedCode, setSelectedCode } : PrestonMapProps) {
     const mapRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         if (!mapRef.current) return
+
+        const selectedStyle = new Style({
+          stroke: new Stroke({
+            color: 'rgba(200,20,20,0.8)',
+            width: 2,
+          }),
+          fill: new Fill({
+            color: 'rgba(200,20,20,0.4)',
+          }),
+        })
+
+        const unselectedStyle = new Style({
+          stroke: new Stroke({
+            color: 'rgb(0, 0, 0, 0)',
+            width: 1,
+          }),
+          fill: new Fill({
+            color: 'rgba(20, 158, 200, 0.1)',
+          }),
+        })
 
         const vectorOverlay = new VectorSource({
           features: new GeoJSON().readFeatures(prestonJson)
@@ -33,6 +61,12 @@ export default function PrestonMap() {
 
         const vectorLayer = new VectorLayer({
           source: vectorOverlay,
+          style: (feature) => {
+            if (feature.get('code') === selectedCode) {
+              return selectedStyle
+            }
+            return unselectedStyle
+          }
         })
 
         const mapObj = new Map({
@@ -49,14 +83,25 @@ export default function PrestonMap() {
               projection: projection,
               imageExtent: extent,
             }) }),
-            vectorLayer
+            vectorLayer,
           ],
+        })
+
+        mapObj.on('click', (event) => {
+          vectorLayer.getFeatures(event.pixel).then((features) => {
+            if (features.length) {
+              const selectedFeature = features[0]
+              const newCode = selectedFeature.get('code')
+              setSelectedCode(newCode)
+              vectorLayer.changed()
+            }
+          })
         })
 
         mapObj.setTarget(mapRef.current)
 
         return () => mapObj.setTarget('')
-    }, []);
+    }, [setSelectedCode]);
 
     return <div className="map" ref={mapRef} style={{ width: '100%', height: '70%' }} />
 }

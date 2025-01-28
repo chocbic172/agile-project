@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useCallback, useState } from "react";
 
 import Desktop from "./pages/Desktop";
 import Mobile from "./pages/Mobile";
@@ -15,14 +15,21 @@ export default function App() {
     const [choosingPage, setChoosingPage] = useState(true)
     const [page, setPage] = useState(Pages.DESKTOP)
 
-    const choosePage = (page: Pages) => {
+    // Code of the selected building, or an empty string if not selected
+    const [selectedCode, setSelectedCode] = useState('')
+
+    const choosePage = useCallback((page: Pages) => {
         setPage(page)
         setChoosingPage(false)
-    }
+    }, [setPage, setChoosingPage])
 
-    const returnToMenu = () => {
+    const returnToMenu = useCallback(() => {
         setChoosingPage(true)
-    }
+    }, [setChoosingPage])
+
+    const changeSelectedBuilding = useCallback((newCode: string) => {
+        setSelectedCode(newCode)
+    }, [setSelectedCode])
 
     // A really cursed "page router", mainly for debugging on desktop
     if (choosingPage) {
@@ -43,9 +50,13 @@ export default function App() {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
-                <PrestonMap />
+                <PrestonMap selectedCode={selectedCode} setSelectedCode={changeSelectedBuilding} />
                 <Container maxWidth='sm' sx={{paddingTop: 2}}>
                     <Stack spacing={2}>
+                        <span>
+                          {/* TODO:  */}
+                            {selectedCode}
+                        </span>
                         <Button onClick={() => {choosePage(Pages.MOBILE)}} variant='contained'>
                             Preview In 3D
                         </Button>
