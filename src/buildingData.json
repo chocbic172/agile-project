@@ -73,7 +73,7 @@
     },
     "ER": {
         "name": "Eden Building",
-        "image_src": "N/A",
+        "image_src": "null",
         "google_maps": "https://maps.app.goo.gl/DdyY9HPWXZH3dJiy6",
         "facilities": {
             "wheelchair accessible": false
@@ -109,7 +109,7 @@
     },
     "FS": {
         "name": "Foster Square",
-        "image_src": "N/A",
+        "image_src": "null",
         "google_maps": "https://maps.app.goo.gl/qFRRdaYG612tuFXPA",
         "facilities": {
             "wheelchair accessible": true
@@ -154,7 +154,7 @@
     },
     "HH": {
         "name": "Heatley House",
-        "image_src": "N/A",
+        "image_src": "null",
         "google_maps": "https://maps.app.goo.gl/n7smGQFPHWyD1RzG7",
         "facilities": {
             "wheelchair accessible": false
@@ -163,7 +163,7 @@
     },
     "JBF": {
         "name": "JB Firth Building",
-        "image_src": "N/A",
+        "image_src": "null",
         "google_maps": "https://maps.app.goo.gl/GxZsTnBT5Fizx2fP6",
         "facilities": {
             "wheelchair accessible": true
@@ -267,7 +267,7 @@
         "facilities": {
             "wheelchair accessible": true
         },
-        "isAccomodation": false
+        "isAccomodation": true
     },
     "STF": {
         "name": "Sir Tom Finney Sports Centre",
@@ -369,7 +369,7 @@
         "isAccomodation": false
     },
     "WB": {
-        "name": "https://maps.app.goo.gl/YDc9THvS9o4wodPk9",
+        "name": "Wharf Building",
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=VJ2rpi_bgLf4pmShL7Ne0g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=145.40388&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/YDc9THvS9o4wodPk9",
         "facilities": {
@@ -378,12 +378,12 @@
         "isAccomodation": false
     },
     "WR": {
-        "name": "Whitendale Halls",
+        "name": "Whitendale Hall",
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipOlZhqZgGwlpzpJYK-DxUDB_GdR_ftakpWTrtwt=w408-h544-k-no",
         "google_maps": "https://maps.app.goo.gl/djpvWnkeQfF5dSG96",
         "facilities": {
             "wheelchair accessible": true
         },
-        "isAccomodation": false
+        "isAccomodation": true
     }
 }
