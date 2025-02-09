@@ -4,7 +4,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=JfkOUKiCxzpXshPnQ9ozIg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=84.380005&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/cNMQEwVVSEQ3E9uH8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -13,7 +13,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=VcRhoSsBxvbzXik5v8qbgw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=303.41867&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/gJuoM6uuep3LhpGc7",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -22,7 +22,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipM7mN5ezQIw19ur2UmQaCBwz-i-QoRWlPO0MOln=w408-h306-k-no",
         "google_maps": "https://maps.app.goo.gl/kdHHwMJ6C2gUQgNa9",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -31,7 +31,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=dR2k5kMESjs443cVLU17kA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=164.29344&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/wguqrc8LkGtozRAD8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -40,7 +40,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipPcDpkfRkDDVEwNOhN7uJPGEpeuUrdlmgN6uS3G=w426-h240-k-no",
         "google_maps": "https://maps.app.goo.gl/7J5UUMEsWJGehtF47",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -49,7 +49,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipOQw-1X5L9Cla3JnO3iNZYlW6rGJGR8vUwuwohN=w408-h900-k-no",
         "google_maps": "https://maps.app.goo.gl/wguqrc8LkGtozRAD8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -58,7 +58,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=UzBXAJk_y4oeJvcWmpyeoA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=9.426199&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/BJF34Xk4mELBTSZb8",
         "facilities": {
-            "wheelchair accessible": false
+            "wheelchair_accessible": false
         },
         "isAccomodation": true
     },
@@ -67,7 +67,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Fa4Js8SrChWjDKDh5LblBA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=323.211&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/qzs5HGkNprNqPkKTA",
         "facilities": {
-            "wheelchair accessible": false
+            "wheelchair_accessible": false
         },
         "isAccomodation": true
     },
@@ -76,7 +76,7 @@
         "image_src": null,
         "google_maps": "https://maps.app.goo.gl/DdyY9HPWXZH3dJiy6",
         "facilities": {
-            "wheelchair accessible": false
+            "wheelchair_accessible": false
         },
         "isAccomodation": false
     },
@@ -85,7 +85,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=4Bs9pFD-z1LEuIulOvr_rw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=311.03235&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/brgYwncR8YnHCdZb7",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -94,7 +94,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipPy7FX-KL9SCe6XInmoSAuxzjDLqmUeCl86HGQn=w408-h544-k-no",
         "google_maps": "https://maps.app.goo.gl/N5Lv9av2uH4gixiY9",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -103,7 +103,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipPnM0zkiiO3dGjy2-5JqAPf5kbWb63f_lxIHo7v=w408-h306-k-no",
         "google_maps": "https://maps.app.goo.gl/huvpjAQfRY9daSRv5",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -112,7 +112,7 @@
         "image_src": null,
         "google_maps": "https://maps.app.goo.gl/qFRRdaYG612tuFXPA",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -121,7 +121,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipOtLopu0hlTEP6ng4wMKx9SSQKehmK5oWK0XNt8=w408-h306-k-no",
         "google_maps": "https://maps.app.goo.gl/K5AXC3jzZBPwwLXP6",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -130,7 +130,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=xbUw602fb4qLFUNS2jwJ1A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=306.69534&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/8uLHJrbvhDoiComd7",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -139,7 +139,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipNKt4m8g-uISglLxDgkMbaXP0F-ga77DZIJ4qi0=w408-h306-k-no",
         "google_maps": "https://maps.app.goo.gl/hWfPP8W6mamrAW4CA",
         "facilities": {
-            "wheelchair accessible": false
+            "wheelchair_accessible": false
         },
         "isAccomodation": false
     },
@@ -148,7 +148,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipPUC3AX8_XTghZC3g3TY6bq0OwNc38T4jcuYG_I=w613-h240-k-no",
         "google_maps": "https://maps.app.goo.gl/rGPNBXtvAVSjZeBJ7",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -157,7 +157,7 @@
         "image_src": null,
         "google_maps": "https://maps.app.goo.gl/n7smGQFPHWyD1RzG7",
         "facilities": {
-            "wheelchair accessible": false
+            "wheelchair_accessible": false
         },
         "isAccomodation": false
     },
@@ -166,7 +166,7 @@
         "image_src": null,
         "google_maps": "https://maps.app.goo.gl/GxZsTnBT5Fizx2fP6",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -175,7 +175,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=_D5bZI_UioJmf3qzbnLAVQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=265.99686&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/F6Qdr69aJLUUnzP69",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -184,7 +184,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=OyRTiqs78b6FO2ST6vdP9A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=74.103714&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/vKCs5cdQJgaZroaQA",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -193,7 +193,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipNTdSLVX51CEochxq939XuyZFsh97x-Kt7m_tRZ=w408-h273-k-no",
         "google_maps": "https://maps.app.goo.gl/deQADtaoYA5ScPwU9",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -202,7 +202,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=5H6kMF_Qao8Y5hCAOXWzHw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=288.11038&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/NuWZLXmXULVTRsUJ8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -211,7 +211,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=e8oM7kUh7V0LkDyH6ph88g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=113.17086&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/DHmr7Eo58AVtDA7u6",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -220,7 +220,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipNVGHCqric67HaPWa-PBnjkq_Lz-9rjVdms5B44=w408-h307-k-no",
         "google_maps": "https://maps.app.goo.gl/a5JNMwZQXGxcm6AH9",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -229,7 +229,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipM8UpYPw1EbwcdgFROm_E0OZCFnEpMSb6Qb5stl=w408-h306-k-no",
         "google_maps": "https://maps.app.goo.gl/h46JM2RNf68frVEZA",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -238,7 +238,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=4bkgKlpDqyHNy9KFAI4O_g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=124.945724&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/QNbhbgDMHp6vd7cY8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": true
     },
@@ -247,7 +247,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qSf8hKuy1HylnL7cft6pGA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=291.34177&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/AHqU4kXopQB2ewJJ7",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -256,7 +256,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipPR-k4udS9XgxTGDCwA7t5nMCOhIX91s0lZuFRQ=w408-h544-k-no",
         "google_maps": "https://maps.app.goo.gl/s2mAarx14gFJ3ftZ6",
         "facilities": {
-            "wheelchair accessible": false
+            "wheelchair_accessible": false
         },
         "isAccomodation": true
     },
@@ -265,7 +265,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipOftayVy0LHODH2_58C6Gf69SsfLdoH9dNl1oNp=w408-h544-k-no",
         "google_maps": "https://maps.app.goo.gl/oRxZUMcGoAW19aCv7",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": true
     },
@@ -274,7 +274,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipM0oFZMhEEVMqMqJqUauBba5E_IY58vppD64fn5=w408-h270-k-no",
         "google_maps": "https://maps.app.goo.gl/xqbf1fLC6b6jZTze8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -283,7 +283,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Zp13lTP217SiV9HdLqDPOQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=340.4846&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/dDaZDwZFgtGrtzsF7",
         "facilities": {
-            "wheelchair accessible": false
+            "wheelchair_accessible": false
         },
         "isAccomodation": false
     },
@@ -292,7 +292,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=2hl1kC0AvPi45P9Wpa70Iw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=77.70684&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/aNiP7dSwQRqZBT7y7",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -301,7 +301,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=UzA0hDShui7qcobAo6mNOw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=249.36038&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/PSr3hni7eaZ1eStc8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -310,7 +310,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipNC_eJ3VG8l1_YBPPkloJPLl5dSJlgwNkvqaj3g=w426-h240-k-no",
         "google_maps": "https://maps.app.goo.gl/bexyhKNGB4YoL9eH6",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -319,7 +319,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipMuFAo06aDv-0lEUdHle-KmlJd_6By4CYm5Y9Qb=w408-h544-k-no",
         "google_maps": "https://maps.app.goo.gl/mHXigRj5xfN79Got6",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -328,7 +328,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=pNuzk0OViSh3-KGVOSSxBQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=24.159023&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/HjQXgBpSRNWjmoUD6",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -337,7 +337,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipMSNYwCnG6nLnejCpVKuDQT9C4jdmd7mefYbqPE=w408-h306-k-no",
         "google_maps": "https://maps.app.goo.gl/HwNxrMfLRsmbqSE97",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -346,7 +346,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=JDD45GnY_4gkJC-6l_8F-A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=173.2875&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/Miu5thpG1Z9RZjv48",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -355,7 +355,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipOe38PX85l9UVQyyUlvY7XtF_-FmCKSJngJ53C0=w408-h272-k-no",
         "google_maps": "https://maps.app.goo.gl/Nj1BCeQygmLB8F4M6",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -364,7 +364,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipMtPn-uBIra2x60ASoGKnrf5FgWQJ4pMEYiV2RF=w408-h863-k-no",
         "google_maps": "https://maps.app.goo.gl/KbDFiRJ4ksr79UuQ8",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -373,7 +373,7 @@
         "image_src": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=VJ2rpi_bgLf4pmShL7Ne0g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=145.40388&pitch=0&thumbfov=100",
         "google_maps": "https://maps.app.goo.gl/YDc9THvS9o4wodPk9",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": false
     },
@@ -382,7 +382,7 @@
         "image_src": "https://lh5.googleusercontent.com/p/AF1QipOlZhqZgGwlpzpJYK-DxUDB_GdR_ftakpWTrtwt=w408-h544-k-no",
         "google_maps": "https://maps.app.goo.gl/djpvWnkeQfF5dSG96",
         "facilities": {
-            "wheelchair accessible": true
+            "wheelchair_accessible": true
         },
         "isAccomodation": true
     }

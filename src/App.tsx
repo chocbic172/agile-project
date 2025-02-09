@@ -9,6 +9,17 @@ import PrestonMap from "./components/PrestonMap";
 enum Pages {
     DESKTOP,
     MOBILE
+
+}
+
+export interface Building {
+    name: string;
+    image_src: string | null;
+    google_maps: string | null;
+    facilities: {
+        "wheelchair_accessible": boolean;
+    };
+    isAccomodation: boolean;
 }
 
 export default function App() {
@@ -17,6 +28,12 @@ export default function App() {
 
     // Code of the selected building, or an empty string if not selected
     const [selectedCode, setSelectedCode] = useState('')
+    const [selectedBuilding, setSelectedBuilding] = useState<Building>({
+        google_maps: "",
+        image_src: "",
+        isAccomodation: false,
+        name: "",
+        facilities: {wheelchair_accessible: false,}})
 
     const choosePage = useCallback((page: Pages) => {
         setPage(page)
@@ -30,6 +47,10 @@ export default function App() {
     const changeSelectedBuilding = useCallback((newCode: string) => {
         setSelectedCode(newCode)
     }, [setSelectedCode])
+
+    const changeSelectedBuildingjson = useCallback((newBuilding: Building) => {
+        setSelectedBuilding(newBuilding)
+    }, [setSelectedBuilding])
 
     // A really cursed "page router", mainly for debugging on desktop
     if (choosingPage) {
@@ -50,12 +71,18 @@ export default function App() {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
-                <PrestonMap selectedCode={selectedCode} setSelectedCode={changeSelectedBuilding} />
+                <PrestonMap selectedCode={selectedCode} setSelectedCode={changeSelectedBuilding} selectedBuilding={selectedBuilding} setSelectedBuilding={changeSelectedBuildingjson}/>
                 <Container maxWidth='sm' sx={{paddingTop: 2}}>
                     <Stack spacing={2}>
                         <span>
-                          {/* TODO:  */}
-                            {selectedCode}
+                          {/* TODO:  add the pop up for the building here. make a componant then populate that with the
+                          building data. then set to null if a close button is clicked on top of the pop up*/}
+                            {selectedBuilding.name}<br/>
+                            <h1>Google maps link {selectedBuilding.google_maps}</h1><br/>
+                            <img id={'image'} src={selectedBuilding.image_src ? selectedBuilding.image_src : undefined} alt={'building picture'}></img>
+                            {selectedBuilding.isAccomodation ? <h1>It is accomodation</h1> : <h1>It isnt accomodation</h1>}
+                            {selectedBuilding.facilities.wheelchair_accessible ? <h1>It is wheelchair accessible</h1> : <h1>It isnt wheelchair accessible</h1>}
+
                         </span>
                         <Button onClick={() => {choosePage(Pages.MOBILE)}} variant='contained'>
                             Preview In 3D
