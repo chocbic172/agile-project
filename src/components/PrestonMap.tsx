@@ -30,7 +30,6 @@ const projection = new Projection({
 interface PrestonMapProps {
     selectedCode: string,
     setSelectedCode: (newCode: string) => void,
-    selectedBuilding: Building,
     setSelectedBuilding: (newBuilding: Building) => void,
 }
 
@@ -122,7 +121,7 @@ export default function PrestonMap({
         return () => mapObj.setTarget('')
     }, [setSelectedCode]);
 
-    return <div className="map" ref={mapRef} style={{width: '100%', height: '70%'}}/>
+    return <div className="map" ref={mapRef} style={{width: '100%', height: '50%'}}/>
 
     async function searchBuildingByCode(code: string) {
             const buildings: Record<string, Building> = buildingData;

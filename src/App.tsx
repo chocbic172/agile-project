@@ -1,16 +1,10 @@
-import { Suspense, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
-import Desktop from "./pages/Desktop";
-import Mobile from "./pages/Mobile";
-import { AppBar, Button, Container, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import Mobile from "./pages/MobileXR";
+import { AppBar, Container, IconButton, Toolbar, Typography } from "@mui/material";
 import { FilterAlt } from "@mui/icons-material";
 import PrestonMap from "./components/PrestonMap";
-
-enum Pages {
-    DESKTOP,
-    MOBILE
-
-}
+import { BuildingCard } from "./components/BuildingCard";
 
 export interface Building {
     name: string;
@@ -23,26 +17,19 @@ export interface Building {
 }
 
 export default function App() {
-    const [choosingPage, setChoosingPage] = useState(true)
-    const [page, setPage] = useState(Pages.DESKTOP)
+    const [XROpen, setXROpen] = useState(false)
 
     // Code of the selected building, or an empty string if not selected
     const [selectedCode, setSelectedCode] = useState('')
-    const [selectedBuilding, setSelectedBuilding] = useState<Building>({
-        google_maps: "",
-        image_src: "",
-        isAccomodation: false,
-        name: "",
-        facilities: {wheelchair_accessible: false,}})
+    const [selectedBuilding, setSelectedBuilding] = useState<Building | null>(null)
 
-    const choosePage = useCallback((page: Pages) => {
-        setPage(page)
-        setChoosingPage(false)
-    }, [setPage, setChoosingPage])
+    const openXR = useCallback(() => {
+        setXROpen(true)
+    }, [setXROpen])
 
-    const returnToMenu = useCallback(() => {
-        setChoosingPage(true)
-    }, [setChoosingPage])
+    const closeXR = useCallback(() => {
+        setXROpen(false)
+    }, [setXROpen])
 
     const changeSelectedBuilding = useCallback((newCode: string) => {
         setSelectedCode(newCode)
@@ -52,14 +39,13 @@ export default function App() {
         setSelectedBuilding(newBuilding)
     }, [setSelectedBuilding])
 
-    // A really cursed "page router", mainly for debugging on desktop
-    if (choosingPage) {
-        return(
+    if (!XROpen) {
+        return (
             <>
                 <AppBar position='static'>
                     <Toolbar>
                         <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-                            App Name
+                            UCLan Map
                         </Typography>
                         <IconButton
                             size='large'
@@ -71,43 +57,32 @@ export default function App() {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
-                <PrestonMap selectedCode={selectedCode} setSelectedCode={changeSelectedBuilding} selectedBuilding={selectedBuilding} setSelectedBuilding={changeSelectedBuildingjson}/>
-                <Container maxWidth='sm' sx={{paddingTop: 2}}>
-                    <Stack spacing={2}>
-                        <span>
-                          {/* TODO:  add the pop up for the building here. make a componant then populate that with the
-                          building data. then set to null if a close button is clicked on top of the pop up*/}
-                            {selectedBuilding.name}<br/>
-                            <h1>Google maps link {selectedBuilding.google_maps}</h1><br/>
-                            <img id={'image'} src={selectedBuilding.image_src ? selectedBuilding.image_src : undefined} alt={'building picture'}></img>
-                            {selectedBuilding.isAccomodation ? <h1>It is accomodation</h1> : <h1>It isnt accomodation</h1>}
-                            {selectedBuilding.facilities.wheelchair_accessible ? <h1>It is wheelchair accessible</h1> : <h1>It isnt wheelchair accessible</h1>}
+                
+                <PrestonMap
+                    selectedCode={selectedCode}
+                    setSelectedCode={changeSelectedBuilding}
+                    setSelectedBuilding={changeSelectedBuildingjson}
+                />
 
-                        </span>
-                        <Button onClick={() => {choosePage(Pages.MOBILE)}} variant='contained'>
-                            Preview In 3D
-                        </Button>
-                        <Button onClick={() => {choosePage(Pages.DESKTOP)}} variant='contained'>
-                            Open Desktop
-                        </Button>
-                    </Stack>
+                <Container maxWidth='sm' sx={{paddingTop: 2}}>
+                    {selectedBuilding ?
+                        <BuildingCard
+                            selectedBuilding={selectedBuilding}
+                            openXR={openXR}
+                        /> :
+                        <>
+                            <Typography variant={'h5'} textAlign={'center'}>
+                                No Building Selected
+                            </Typography>
+                            <Typography variant={'body1'} textAlign={'center'}>
+                                Please select a building by clicking on the map above.
+                            </Typography>
+                        </>
+                    }
                 </Container>
             </>
         )
-
     } else {
-        return(
-            <>
-                <Suspense fallback={<p>Loading</p>}>
-                {(() => {
-                    switch (page) {
-                        case Pages.DESKTOP: return <Desktop returnToMenu={returnToMenu} />
-                        case Pages.MOBILE:  return <Mobile returnToMenu={returnToMenu} />
-                        default: <p>Error</p>
-                    }
-                })()}
-                </Suspense>
-            </>
-        )
+        return <Mobile returnToMenu={closeXR} />
     }
 }
